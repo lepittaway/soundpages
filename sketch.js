@@ -120,8 +120,9 @@ function draw() {
 function drawNames() {
   for ( var i = 0; i < texts.length; i += 1 ) {
     
-    var pw = windowWidth - windowWidth/8;
+    var pw = windowWidth - windowWidth/6;
     texts[i].style('min-width', pw + 'px');
+    texts[i].style('max-width', pw + 'px');
     
     texts[i].position(map(interviewsX[i], 0, 100, -canvasRad, canvasRad) + offsetX - gx - pw/2, map(interviewsY[i], 0, 100, -canvasRad, canvasRad) + offsetY - gy - audioDiamS/2);
     
